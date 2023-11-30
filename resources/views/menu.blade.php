@@ -11,15 +11,17 @@
 <section class="container">
  <div class="row">
     @foreach ($data as $data)
-    <div class="col-md-3 mb-2 my-5">
+    <div class="col-md-4 mb-2 my-5">
     <div class="card" id="crad">
-        <img src="{{asset($data->image)}}" class="card-img-top" alt="...">
+        <img src="{{asset($data->image)}}" class="card-img-top" style="max-height: 250px; min-height:250px;" alt="...">
         <div class="card-body">
             <h4 class="text-center text-danger">{{$data->price}}</h2>
           <h3 class="card-title text-center">{{$data->name}}</h1>
           <p class="card-text text-center">{{$data->descraption}}</p>          
         </div>
+     
     </div>
+   
       
       </div>
       @endforeach
